@@ -1,6 +1,7 @@
 ## 1.0.2 - 2020-11-08
 
 * Build with the .NET Core SDK version 3.1.403
+* Include the changelog in NuGet metadata
 
 ## 1.0.1 - 2020-11-08
 
