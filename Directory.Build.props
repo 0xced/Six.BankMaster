@@ -1,0 +1,9 @@
+<Project>
+  <ItemGroup>
+    <!-- To avoid getting this error on AppVeyor: SourceRoot items must include at least one top-level (not nested) item when DeterministicSourcePaths is true
+         See https://github.com/dotnet/sourcelink/issues/91#issuecomment-400787926 and https://github.com/dotnet/roslyn/issues/37379 -->
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="2.3.1" PrivateAssets="All" />
+    <PackageReference Include="Nullable" Version="1.3.0" PrivateAssets="All" />
+  </ItemGroup>
+</Project>
