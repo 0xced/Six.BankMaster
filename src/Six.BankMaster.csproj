@@ -10,9 +10,11 @@
     <EmbedAllSources>true</EmbedAllSources>
     <Authors>Cédric Luthi</Authors>
     <Copyright>Copyright © Cédric Luthi</Copyright>
+    <Description>A Refit-based client to access SIX Bank Master data</Description>
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/0xced/Six.BankMaster</PackageProjectUrl>
+    <PackageTags>SIX Swiss Bank</PackageTags>
     <RepositoryUrl>https://github.com/0xced/Six.BankMaster</RepositoryUrl>
   </PropertyGroup>
 
