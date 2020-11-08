@@ -44,6 +44,10 @@ namespace SampleCode
 
 # Release Notes
 
+## Version 1.0.2
+
+Build with .NET Core SDK version 3.1.403
+
 ## Version 1.0.1
 
 Fixed metadata for NuGet publishing (description and tags)
