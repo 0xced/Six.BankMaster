@@ -42,3 +42,12 @@ namespace SampleCode
 }
 ```
 
+# Release Notes
+
+## Version 1.0.1
+
+Fixed metadata for NuGet publishing (description and tags)
+
+## Version 1.0.0
+
+Initial release
