@@ -24,12 +24,12 @@ namespace Six.BankMaster
         /// Participation in euroSIC
         /// </summary>
         [EnumMember(Value = @"EURO_SIC_PARTICIPATION")]
-        EuroSicParticipation = 2,
+        EuroSicParticipation = 3,
 
         /// <summary>
         /// Participation in euroSIC with QR-IID for payments with QR reference
         /// </summary>
         [EnumMember(Value = @"EURO_SIC_PARTICIPATION_WITH_QR_IID")]
-        EuroSicParticipationWithQrIid = 3,
+        EuroSicParticipationWithQrIid = 4,
     }
 }

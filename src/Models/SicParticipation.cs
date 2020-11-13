@@ -24,12 +24,12 @@ namespace Six.BankMaster
         /// Participation in SIC
         /// </summary>
         [EnumMember(Value = @"SIC_PARTICIPATION")]
-        SicParticipation = 2,
+        SicParticipation = 3,
 
         /// <summary>
         /// Participation in SIC with QR-IID for payments with QR reference
         /// </summary>
         [EnumMember(Value = @"SIC_PARTICIPATION_WITH_QR_IID")]
-        SicParticipationWithQrIid = 3,
+        SicParticipationWithQrIid = 4,
     }
 }
