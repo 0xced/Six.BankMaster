@@ -62,10 +62,10 @@ namespace Six.BankMaster
         public EuroSicParticipation EuroSicParticipation { get; set; } = default!;
 
         /// <summary>
-        /// The fields <see cref="ShortName"/> and <see cref="BankOrInstitutionName"/> for each record are supplied in the respective languages.
-        /// DE = German, FR = French, IT = Italian
+        /// The preferred <see cref="Language"/> of the bank.
         /// </summary>
-        public string Language { get; set; } = default!;
+        /// <remarks>The fields <see cref="ShortName"/> and <see cref="BankOrInstitutionName"/> for each record are supplied in the respective languages.</remarks>
+        public Language Language { get; set; } = default!;
 
         /// <summary>
         /// Short name of the bank or financial institution, in its respective <see cref="Language"/>.
