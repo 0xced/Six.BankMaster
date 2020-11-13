@@ -5,6 +5,7 @@ namespace Six.BankMaster
     /// <summary>
     /// Provides information regarding participation in the services euroSIC and LSV+/BDD in EUR.
     /// </summary>
+    /// <remarks>The enum values match the "Bank Master – Record Description" documentation available at https://www.six-group.com/dam/download/banking-services/interbank-clearing/en/bc_bank_master/bc_records.pdf</remarks>
     public enum EuroSicParticipation
     {
         /// <summary>
