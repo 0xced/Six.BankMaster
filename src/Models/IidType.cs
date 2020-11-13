@@ -11,18 +11,18 @@ namespace Six.BankMaster
         /// Headquarters
         /// </summary>
         [EnumMember(Value = @"HEADQUARTERS")]
-        Headquarters = 0,
+        Headquarters = 1,
 
         /// <summary>
         /// Main branch
         /// </summary>
         [EnumMember(Value = @"MAIN_BRANCH")]
-        MainBranch = 1,
+        MainBranch = 2,
 
         /// <summary>
         /// Branch
         /// </summary>
         [EnumMember(Value = @"BRANCH")]
-        Branch = 2,
+        Branch = 3,
     }
 }
