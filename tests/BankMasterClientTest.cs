@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
@@ -29,11 +30,11 @@ namespace Six.BankMaster.Tests
 
     public class BankMasterClientTest
     {
-        private readonly HttpMessageHandler _httpClientHandler;
+        private readonly HttpMessageHandler _httpMessageHandler;
 
         public BankMasterClientTest()
         {
-            _httpClientHandler = new RecordedFileHandler(new DirectoryInfo("."));
+            _httpMessageHandler = new RecordedFileHandler(new DirectoryInfo("."));
         }
 
         [Fact]
@@ -46,7 +47,7 @@ namespace Six.BankMaster.Tests
             var masterData = await client.GetMasterDataAsync();
 
             // Assert
-            masterData.Entries.Should().NotBeEmpty();
+            AssertValidData(masterData);
         }
 
         [Fact]
@@ -59,33 +60,44 @@ namespace Six.BankMaster.Tests
             var masterData = await client.GetMasterDataAsync();
 
             // Assert
-            masterData.Entries.Should().NotBeEmpty();
+            AssertValidData(masterData);
         }
 
         [Fact]
         public async Task SystemTextJsonClient_RecordedResponse_ReturnsValidMasterData()
         {
             // Arrange
-            var client = BankMasterClientFactory.CreateSystemTextJsonClient(() => _httpClientHandler);
+            var client = BankMasterClientFactory.CreateSystemTextJsonClient(() => _httpMessageHandler);
 
             // Act
             var masterData = await client.GetMasterDataAsync();
 
             // Assert
-            masterData.Entries.Should().NotBeEmpty();
+            AssertValidData(masterData);
         }
 
         [Fact]
         public async Task NewtonsoftJsonClient_RecordedResponse_ReturnsValidMasterData()
         {
             // Arrange
-            var client = BankMasterClientFactory.CreateNewtonsoftJsonClient(() => _httpClientHandler);
+            var client = BankMasterClientFactory.CreateNewtonsoftJsonClient(() => _httpMessageHandler);
 
             // Act
             var masterData = await client.GetMasterDataAsync();
 
             // Assert
+            AssertValidData(masterData);
+        }
+
+        private static void AssertValidData(BankMasterData masterData)
+        {
             masterData.Entries.Should().NotBeEmpty();
+            masterData.Entries.Select(e => e.BranchId).Should().AllBeOfType<string>();
+            masterData.Entries.Select(e => e.SicIid).Should().AllBeOfType<string>();
+            masterData.Entries.Select(e => e.ShortName).Should().AllBeOfType<string>();
+            masterData.Entries.Select(e => e.BankOrInstitutionName).Should().AllBeOfType<string>();
+            masterData.Entries.Select(e => e.ZipCode).Should().AllBeOfType<string>();
+            masterData.Entries.Select(e => e.Place).Should().AllBeOfType<string>();
         }
     }
 }
