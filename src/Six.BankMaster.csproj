@@ -14,7 +14,7 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/0xced/Six.BankMaster</PackageProjectUrl>
-    <PackageReleaseNotes>$([System.IO.File]::ReadAllText("$(MSBuildProjectDirectory)/../CHANGELOG.md"))</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/0xced/Six.BankMaster/blob/main/CHANGELOG.md</PackageReleaseNotes>
     <PackageTags>SIX Swiss Bank</PackageTags>
     <RepositoryUrl>https://github.com/0xced/Six.BankMaster</RepositoryUrl>
   </PropertyGroup>
