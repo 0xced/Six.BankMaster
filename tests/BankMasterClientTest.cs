@@ -92,6 +92,7 @@ namespace Six.BankMaster.Tests
         private static void AssertValidData(BankMasterData masterData)
         {
             masterData.Entries.Should().NotBeEmpty();
+            masterData.Entries.GroupBy(e => new { e.Iid, e.BranchId }).Select(g => g.Count()).Should().AllBeEquivalentTo(1);
             masterData.Entries.Select(e => e.BranchId).Should().AllBeOfType<string>();
             masterData.Entries.Select(e => e.SicIid).Should().AllBeOfType<string>();
             masterData.Entries.Select(e => e.ShortName).Should().AllBeOfType<string>();
