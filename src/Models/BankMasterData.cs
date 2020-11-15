@@ -10,11 +10,11 @@ namespace Six.BankMaster
         /// <summary>
         /// Metadata about the Master Data.
         /// </summary>
-        public BankMasterMetaData MetaData { get; set; } = new BankMasterMetaData();
+        public BankMasterMetaData MetaData { get; init; } = new BankMasterMetaData();
 
         /// <summary>
         /// A collection of <see cref="Bank"/> objects.
         /// </summary>
-        public ICollection<Bank> Entries { get; set; } = new List<Bank>();
+        public ICollection<Bank> Entries { get; init; } = new List<Bank>();
     }
 }

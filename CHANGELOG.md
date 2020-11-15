@@ -1,3 +1,7 @@
+## 3.0.0 - 2020-11-15
+
+* All model properties have now [init only setters](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/csharp-9#init-only-setters), making them immutabe.
+
 ## 2.0.0 - 2020-11-13
 
 * Updated the following enum values to match the [Bank Master – Record Description](https://www.six-group.com/dam/download/banking-services/interbank-clearing/en/bc_bank_master/bc_records.pdf) documentation.
